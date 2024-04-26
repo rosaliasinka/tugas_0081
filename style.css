@@ -1,0 +1,64 @@
+body{
+    font-family:  "Roboto", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 100%;
+}
+
+header {
+    background: turquoise;
+    height: 80px;
+}
+
+.nav {
+    background: white;
+    height: 80px;
+}
+
+.footer {
+    background: white;
+    height: 120px;
+}
+
+.main {
+    background: white;
+    height: 650px;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.aside1{
+    background: white;
+}
+
+/* tampilan responsive */
+@media all and (min-width: 800px) {
+    .main {
+        flex: 2;
+    }
+    .aside1 {
+        order: 2;
+    }
+    .main {
+        order: 1;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside1 {
+        flex: 1;
+    }
+}
